@@ -1,0 +1,396 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% See "README.md" for instructions on compiling this document.
+
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Kurt Jacobson}
+\newcommand{\CVTitle}{{\today} Kurt Jacobson's Resume}
+\newcommand{\CVNote}{Résumé compiled on {\today}}
+\newcommand{\CVWebpage}{www.kcjengr.com}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={KCJ's Résumé},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={Résumé, CV},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+\href{https://www.google.com/maps/place/2521+Flair+Knoll+Ct+NE,+Atlanta,+GA+30345}
+{2521 Flair Knoll Ct., Atlanta, Georgia 30345, USA}
+\par
+\href{mailto:kurtcjacobson@gmail.com}
+{kurt.c.jacobson@gmail.com}
+\,\SubBulletSymbol\,
+(505)\,303-1933
+\,\SubBulletSymbol\,
+\href{\CVWebpage}
+{\url{\CVWebpage}}
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+\href{http://www.kennesaw.edu/}
+{\textbf{Kennesaw State University}},
+Marietta, Georgia, USA
+
+\Gap
+\BulletItem
+B.S. in
+\href{http://engineering.kennesaw.edu/engineering-technology/}
+{Mechanical Engineering Technology}
+\hfill
+\DatestampYM{2013}{08} --
+\DatestampYM{2016}{12}
+\begin{Detail}
+\SubBulletItem
+Cumulative GPA: 4.0 / 4.0
+\SubBulletItem
+Focus:
+Manufacturing, Engineering Graphics
+\end{Detail}
+
+\Gap
+\BulletItem
+Minor in
+\href{http://engineering.kennesaw.edu/nuclear-studies/}
+{Nuclear Engineering}
+\hfill
+\DatestampYM{2015}{01} --
+\DatestampYM{2016}{12}
+%\begin{Detail}
+%\SubBulletItem
+%Focus:
+%Reactor Thermodynamics and Radiation Detection
+%\end{Detail}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Research Experience}
+{Research Experience}
+{PDF:ResearchExperience}
+
+\Entry
+\href{http://engineering.kennesaw.edu/nuclear-studies/}
+{\textbf{Center for Nuclear Studies}},
+Kennesaw State University
+
+\Gap
+\BulletItem
+Undergraduate Research Project
+\hfill
+\DatestampYMD{2016}{06}{1} --
+\DatestampYMD{2017}{04}{7}
+\begin{Detail}
+\SubBulletItem
+Project:
+Alpha Radiation Detector Development And Testing Under Various Conditions
+\SubBulletItem
+Supervisors:
+Dr. Eduardo B. Farfan and
+Dr. Sandip Das
+\SubBulletItem
+Focus:
+Development of a precise and low-cost Chang-Rosenblum type alpha particle detector.
+\SubBulletItem
+Presented at the National Conference on Undergraduate Research, University of Memphis, Apr 6-8, 2017
+\end{Detail}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% WORK EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Work Experience}
+{Work Experience}
+{PDF:WorkExperience}
+
+\Entry
+\href{http://www.example.com/my-company}
+{\textbf{Kennesaw State University}},
+Marietta, Georgia, USA
+
+\Gap
+\BulletItem
+Laboratory Manager,
+KSU Center for Nuclear Studies
+\hfill
+\DatestampYM{2015}{12} --
+\DatestampYM{2017}{4}
+\begin{Detail}
+\SubBulletItem
+Managed liquid nitrogen supply for nuclear lab, including ordering and coordinating delivery.
+\SubBulletItem
+Maintained five state-of-the-art radiation detectors and all associated equipment.
+\SubBulletItem
+Tracked usage and maintained inventory of more then 25 radiation sources.
+\SubBulletItem
+Coordinated and ran 4-8 undergraduate reactor simulation labs per semester (Spring, Summer, Fall).
+\end{Detail}
+
+\Gap
+\BulletItem
+Student Assistant,
+KSU Department of Mechanical Engineering
+\hfill
+\DatestampYM{2016}{1} --
+\DatestampYM{2016}{12}
+\begin{Detail}
+\SubBulletItem
+Graded all homework and tests for multiple upper level Mechanical and Nuclear Engineering classes.
+\SubBulletItem
+Presented and promoted the Nuclear Engineering lab on multiple occasions to industry and university boards.
+\SubBulletItem
+Set up equipment and assisted instructors in running the Radiation Detection and Measurement labs.
+\end{Detail}
+
+\Gap
+\BulletItem
+Supplemental Instruction Leader,
+Southern Polytechnic College of Engineering
+\hfill
+\DatestampYM{2015}{8} --
+\DatestampYM{2016}{12}
+\begin{Detail}
+\SubBulletItem
+One of the first to offer Supplemental Instruction (SI) for an upper level engineering course as KSU.
+\SubBulletItem
+%Dedicated 6hr per week to helping students struggling in the traditionally difficult Strength of Materials course.
+Offered two one hour SI sessions per week for 2-3 sections of Strength of Materials each semester.
+\SubBulletItem
+Developed worksheets and created and maintained a website to aid in assisting students.
+\SubBulletItem
+All students who attended SI passed the class! Previous semesters had less than a 50\% pass rate.
+\end{Detail}
+
+
+\BigGap
+\Entry
+\href{http://tubularfab.com}
+{\textbf{Tubular Fabrication LLC}},
+Flowery Branch, Georgia, USA
+
+\Gap
+\BulletItem
+Lead Mechanical Engineer
+\hfill
+\DatestampYM{2015}{5} --
+\DatestampYM{2015}{8}
+\begin{Detail}
+\SubBulletItem
+Developed a patentable pneumatically actuated large-bore chuck.
+\SubBulletItem
+Created dedicated, easy to use, interactive software for calculating cut path trajectory.
+\SubBulletItem
+Fabricated a fully functional prototype and tested in production environment.
+\SubBulletItem
+Achieved significantly increased accuracy of notches, and reduced cycle times by more than 75\%.
+\end{Detail}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AWARDS & SCHOLARSHIPS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Awards \&\newline
+Scholarships}
+{Awards \& Scholarships}
+{PDF:AwardsAndScholarships}
+
+\BulletItem
+President's List,
+Fall 2013 through Fall 2016,
+Kennesaw State University
+\hfill
+\DatestampY{2013} --
+\DatestampY{2016}
+\begin{Detail}
+\Item
+Awarded each semester for maintaining an overall GPA of 4.0.
+\end{Detail}
+
+\Gap
+\BulletItem
+Clarence Arnston Award,
+KSU Mechanical Engineering Technology Department
+\hfill
+\DatestampYMD{2016}{12}{15}
+\begin{Detail}
+\Item
+Awarded for Outstanding Senior in Mechanical Engineering Technology in the year 2016.
+\end{Detail}
+
+\Gap
+\BulletItem
+Engineering Technology Student of the Year,
+Georgia Engineering Alliance
+\hfill
+\DatestampYMD{2016}{2}{13}
+\begin{Detail}
+\Item
+Awarded at the Georgia Engineers Week Awards Gala.
+\end{Detail}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL AFFILIATIONS & ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Professional Affiliations\newline
+\& Activities}
+{Professional Affiliations \& Activities}
+{PDF:ProfessionalAffiliationsActivities}
+
+%\Gap
+\BulletItem
+\href{http://www.ans.org/}
+{American Nuclear Society},
+Professional Member
+\hfill
+\DatestampYM{2017}{2} -- Present
+
+%\Gap
+\BulletItem
+\href{https://owllife.kennesaw.edu/organization/KNS}
+{Kennesaw Nuclear Society},
+Vice Present
+\hfill
+\DatestampYM{2016}{1} -- \DatestampYM{2016}{12}
+
+%\Gap
+\BulletItem
+\href{http://www.sme.org/}
+{Society of Manufacturing Engineers},
+Student Member
+\hfill
+\DatestampY{2016} -- Present
+
+%\Gap
+\BulletItem
+\href{http://www.asme.org/}
+{American Society of Mechanical Engineers},
+Student Member
+\hfill
+\DatestampYM{2015}{10} -- Present
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL CERTIFICATIONS %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Professional Certifications}
+{Professional Certifications}
+{PDF:ProfessionalCertifications}
+
+%\Gap
+\BulletItem
+\href{http://www.sme.org/cmfgt/}
+{Certified Manufacturing Technologist},
+Society of Manufacturing Engineers
+\hfill
+\DatestampYM{2016}{12} --
+\DatestampYM{2019}{12}
+
+%\Gap
+\BulletItem
+\href{https://owllife.kennesaw.edu/organization/KNS}
+{Certified Solidworks Associate},
+Dassault Systèmes
+\hfill
+\DatestampYM{2014}{11} -- Present
+
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\Section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+\Entry
+Python, Solidworks, MATLab, NI LabVIEW,
+Microsoft Word, Microsoft Excel, Microsoft PowerPoint.
+
+
+%%%%%%%%%%%%%%%
+%% INTERESTS %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Interests \& Hobbies}
+{Interests \& Hobbies}
+{PDF:InterestsHobbies}
+
+\Entry
+Precision Machining,
+Industrial Automation,
+Open Source Software,
+Linux, Woodworking, Hiking
+
+\end{Body}
+
+\end{document}
