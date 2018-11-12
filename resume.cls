@@ -313,7 +313,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Macro: Entry.
 \newcommand{\Entry}
-{\par\vspace{0\baselineskip}%
+{\par\vspace{0\baselineskip\raggedright}%
 \parshape 1%
 \labelwidth \linewidth%
 \ignorespaces%
