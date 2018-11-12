@@ -4,14 +4,15 @@
 % vim: set fenc=utf-8
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% SIMPLE-RESUME-CV
+%% simpleresumecv.cls
 %% <https://github.com/zachscrivena/simple-resume-cv>
 %% This is free and unencumbered software released into the
 %% public domain; see <http://unlicense.org> for details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{simpleresumecv}[2016/12/20 Simple Resume CV https://github.com/zachscrivena/simple-resume-cv]
+
+\ProvidesClass{simpleresumecv}[2016/12/25 Simple Resume CV https://github.com/zachscrivena/simple-resume-cv]
 
 \DeclareOption{a4paper}{\PassOptionsToClass{\CurrentOption}{article}}
 \DeclareOption{letterpaper}{\PassOptionsToClass{\CurrentOption}{article}}
@@ -183,16 +184,16 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Headers and footers: Blank header, page number in footer.
 \AtEndDocument{\null\label{LastPage}}
-%\newcommand{\PageKOfN}{{\UseHeaderFooterFont{Page}~\thepage~of~\pageref{LastPage}}}
-\newcommand{\CompStamp}{{\UseNoteFont[\textit{\CVNote}]}}
+\newcommand{\PageKOfN}{{\UseHeaderFooterFont{Page}~\thepage~of~\pageref{LastPage}}}
 \newcommand{\DraftStamp}{{\UseHeaderFooterFont\color{red}DRAFT~\Timestamp}}
 
-\ifnum\TypesetInDraftMode=1
+\ifnum\TypesetInDraftMode=0
 \newcommand{\HeaderText}{}
-\newcommand{\FooterText}{\null\hfill{\CompStamp}} %{\hfill\PageKOfN\hfill}
+\newcommand{\FooterText}{\hfill\PageKOfN\hfill}
 \else
 \newcommand{\HeaderText}{}
-\newcommand{\FooterText}{\null\hphantom{\DraftStamp}\hfill %{\null\hphantom{\DraftStamp}\hfill%
+\newcommand{\FooterText}{\null\hphantom{\DraftStamp}\hfill%
+\PageKOfN\hfill%
 \DraftStamp\null}
 \fi
 
@@ -281,6 +282,9 @@ BoldItalicFont=FreeSerifBoldItalic]
 {\par\begingroup\UseDetailFont}
 {\par\endgroup\par}
 
+% Macro: Detail (text in smaller font under an item).
+\newcommand{\Details}[1]{\textit{#1}}
+
 % Macro: BulletItem.
 \newsavebox{\BulletItemIndentBox}
 \newlength{\BulletItemIndentWidth}
@@ -313,7 +317,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 
 % Macro: Entry.
 \newcommand{\Entry}
-{\par\vspace{0\baselineskip\raggedright}%
+{\par\vspace{0\baselineskip}%
 \parshape 1%
 \labelwidth \linewidth%
 \ignorespaces%
